@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project integrating [Anon Aadhaar](http
 First, install the dependencies:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 Add your appId under `NEXT_PUBLIC_APP_ID` to your `.env.local`
@@ -13,8 +13,9 @@ Add your appId under `NEXT_PUBLIC_APP_ID` to your `.env.local`
 Then, run the development server:
 
 ```bash
-yarn dev
+pnpm run dev
 ```
+NO yarn!!
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

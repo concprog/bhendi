@@ -25,6 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
             <AnonAadhaarProvider
               _useTestAadhaar={useTestAadhaar}
               _appName="Anon Aadhaar"
+              _artifactslinks={{
+                zkey_url: "/circuit_final.zkey",
+                wasm_url: "/aadhaar-verifier.wasm",
+                vkey_url: "/vkey.json"
+              }}
             >
               <Component
                 {...pageProps}

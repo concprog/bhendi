@@ -57,7 +57,7 @@ export function repay(asset: string, amount: BigNumber){
         address,
         asset,
         amount,
-        InterestRate,
-    );
+        InterestRate.Variable,
+});
     return submitTransaction(txs);
 }

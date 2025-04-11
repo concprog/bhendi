@@ -11,12 +11,12 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    if (anonAadhaar.status === "logged-in") {
+    if (anonAadhaar.status !== "logged-in") {
       router.push("/aadhaar");
     }
   }, [anonAadhaar.status, router]);
 
-  if (anonAadhaar.status === "logged-in") {
+  if (anonAadhaar.status !== "logged-in") {
     return <div>Redirecting to login...</div>;
   }
   return (

@@ -29,7 +29,7 @@ export default function Home({ setUseTestAadhaar, useTestAadhaar }: HomeProps) {
     <div className="min-h-screen bg-gray-100 px-4 py-8">
       {/* Card Container */}
       <main className="flex flex-col items-center gap-6 bg-white rounded-xl shadow-md max-w-screen-sm mx-auto p-8 transition-all hover:shadow-lg">
-        <h1 className="font-bold text-2xl text-gray-800">Welcome to Anon Aadhaar Example</h1>
+        <h1 className="font-bold text-2xl text-gray-800"></h1>
         <p className="text-gray-600 text-center">
           Prove your Identity anonymously using your Aadhaar card.
         </p>

@@ -10,7 +10,6 @@ export const config = createConfig({
     injected(),
     walletConnect({ projectId }),
     metaMask(),
-    safe(),
   ],
   transports: {
     [mainnet.id]: http(),

@@ -8,9 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@aave/contract-helpers':
+        specifier: ^1.33.1
+        version: 1.33.1(bignumber.js@9.2.1)(ethers@5.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(reflect-metadata@0.1.14)(tslib@2.8.1)
+      '@aave/math-utils':
+        specifier: ^1.33.1
+        version: 1.33.1(bignumber.js@9.2.1)(tslib@2.8.1)
       '@anon-aadhaar/react':
         specifier: ^2.4.2
         version: 2.4.3(bufferutil@4.0.9)(react@18.3.1)(utf-8-validate@5.0.10)
+      '@bgd-labs/aave-address-book':
+        specifier: ^4.18.0
+        version: 4.18.0
       '@headlessui/react':
         specifier: ^1.7.17
         version: 1.7.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -56,12 +65,9 @@ importers:
       eslint-config-next:
         specifier: 13.4.19
         version: 13.4.19(eslint@8.49.0)(typescript@5.2.2)
-      framer-motion:
-        specifier: ^12.6.5
-        version: 12.6.5(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      lucide-react:
-        specifier: ^0.487.0
-        version: 0.487.0(react@18.3.1)
+      ethers:
+        specifier: ^5.8.0
+        version: 5.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       next:
         specifier: 13.4.19
         version: 13.4.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -86,6 +92,9 @@ importers:
       typescript:
         specifier: 5.2.2
         version: 5.2.2
+      viem:
+        specifier: ^2.26.3
+        version: 2.26.3(bufferutil@4.0.9)(typescript@5.2.2)(utf-8-validate@5.0.10)(zod@3.22.4)
       wagmi:
         specifier: ^2.14.16
         version: 2.14.16(@tanstack/query-core@5.72.2)(@tanstack/react-query@5.72.2(react@18.3.1))(@types/react@18.3.20)(bufferutil@4.0.9)(react@18.3.1)(typescript@5.2.2)(utf-8-validate@5.0.10)(viem@2.26.3(bufferutil@4.0.9)(typescript@5.2.2)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
@@ -98,6 +107,20 @@ importers:
         version: 1.3.11
 
 packages:
+
+  '@aave/contract-helpers@1.33.1':
+    resolution: {integrity: sha512-Zu/zwJiX3k2xBRAlNfmIJMIo19YWVJAL2uRPHbvCVxOUgzlhVyglIF98FgcZ+4aLwcjvSAw10wnIzGgJcPTNVw==}
+    peerDependencies:
+      bignumber.js: ^9.x
+      ethers: ^5.x
+      reflect-metadata: ^0.1.x
+      tslib: ^2.4.x
+
+  '@aave/math-utils@1.33.1':
+    resolution: {integrity: sha512-+e7ThIRLxyrcLB507T3khdE6DqKn2vTR5hfnQd1rHetEzLObA6bKDElX7YEtGmuSzBwDTP4inpK2VtgiQAqIWQ==}
+    peerDependencies:
+      bignumber.js: ^9.x
+      tslib: ^2.4.x
 
   '@adraffy/ens-normalize@1.11.0':
     resolution: {integrity: sha512-/3DDPKHqqIqxUULp8yP4zODUY1i+2xvVWsv8A79xGWdCAG+8sb0hRh0Rk2QyOJUnnbyPUAZYcpBuRe3nS2OIUg==}
@@ -117,6 +140,9 @@ packages:
   '@babel/runtime@7.27.0':
     resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
+
+  '@bgd-labs/aave-address-book@4.18.0':
+    resolution: {integrity: sha512-FJ1i3fc2Lz0D9nKerHOLIPFxevaMO8axwTEFhRwsL81AncqtFJoYIeATp5pNGKL2+8GXw/4Y/FXrlQd8bHNI4w==}
 
   '@coinbase/wallet-sdk@3.9.3':
     resolution: {integrity: sha512-N/A2DRIf0Y3PHc1XAMvbBUu4zisna6qAdqABMZwBMNEfWrXpAwx16pZGkYCLGE+Rvv1edbcB2LYDRnACNcmCiw==}
@@ -2197,6 +2223,9 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  isomorphic-unfetch@3.1.0:
+    resolution: {integrity: sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==}
+
   isows@1.0.6:
     resolution: {integrity: sha512-lPHCayd40oW98/I0uvgaHKWCSvkzY27LjWLbtzOm64yQ+G3Q5npjjbdppU65iZXkK1Zt+kH9pfegli0AYfwYYw==}
     peerDependencies:
@@ -2835,6 +2864,9 @@ packages:
     resolution: {integrity: sha512-r/H9MzAWtrv8aSVjPCMFpDMl5q66GqtmmRkRjpHTsp4zBAa+snZyiQNlMONiUmEJcsnaw0wCauJ2GWODr/aFkg==}
     engines: {node: '>= 12.13.0'}
 
+  reflect-metadata@0.1.14:
+    resolution: {integrity: sha512-ZhYeb6nRaXCfhnndflDK8qI6ZQ/YcWZCISRAWICW9XYqMUwjZM9Z0DveWX/ABN01oxSHwVxKQmxeYZSsm0jh5A==}
+
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==}
     engines: {node: '>= 0.4'}
@@ -3243,6 +3275,9 @@ packages:
   underscore@1.12.1:
     resolution: {integrity: sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==}
 
+  unfetch@4.2.0:
+    resolution: {integrity: sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==}
+
   unrs-resolver@1.5.0:
     resolution: {integrity: sha512-6aia3Oy7SEe0MuUGQm2nsyob0L2+g57w178K5SE/3pvSGAIp28BB2O921fKx424Ahc/gQ6v0DXFbhcpyhGZdOA==}
 
@@ -3557,6 +3592,21 @@ packages:
 
 snapshots:
 
+  '@aave/contract-helpers@1.33.1(bignumber.js@9.2.1)(ethers@5.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(reflect-metadata@0.1.14)(tslib@2.8.1)':
+    dependencies:
+      bignumber.js: 9.2.1
+      ethers: 5.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      isomorphic-unfetch: 3.1.0
+      reflect-metadata: 0.1.14
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - encoding
+
+  '@aave/math-utils@1.33.1(bignumber.js@9.2.1)(tslib@2.8.1)':
+    dependencies:
+      bignumber.js: 9.2.1
+      tslib: 2.8.1
+
   '@adraffy/ens-normalize@1.11.0': {}
 
   '@alloc/quick-lru@5.2.0': {}
@@ -3611,6 +3661,8 @@ snapshots:
   '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
+
+  '@bgd-labs/aave-address-book@4.18.0': {}
 
   '@coinbase/wallet-sdk@3.9.3':
     dependencies:
@@ -6906,6 +6958,13 @@ snapshots:
 
   isexe@2.0.0: {}
 
+  isomorphic-unfetch@3.1.0:
+    dependencies:
+      node-fetch: 2.7.0
+      unfetch: 4.2.0
+    transitivePeerDependencies:
+      - encoding
+
   isows@1.0.6(ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
     dependencies:
       ws: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -7577,6 +7636,8 @@ snapshots:
 
   real-require@0.1.0: {}
 
+  reflect-metadata@0.1.14: {}
+
   reflect.getprototypeof@1.0.10:
     dependencies:
       call-bind: 1.0.8
@@ -8075,6 +8136,8 @@ snapshots:
   uncrypto@0.1.3: {}
 
   underscore@1.12.1: {}
+
+  unfetch@4.2.0: {}
 
   unrs-resolver@1.5.0:
     optionalDependencies:

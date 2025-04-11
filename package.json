@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aave/contract-helpers": "^1.33.1",
+    "@aave/math-utils": "^1.33.1",
     "@anon-aadhaar/react": "^2.4.2",
+    "@bgd-labs/aave-address-book": "^4.18.0",
     "@headlessui/react": "^1.7.17",
     "@radix-ui/react-slot": "^1.2.0",
     "@tanstack/react-query": "^5.72.2",
@@ -35,6 +38,7 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
+    "viem": "^2.26.3",
     "wagmi": "^2.14.16"
   },
   "devDependencies": {

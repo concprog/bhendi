@@ -1,3 +1,4 @@
+# Bhendi
 This is a [Next.js](https://nextjs.org/) project integrating [Anon Aadhaar](https://github.com/privacy-scaling-explorations/anon-aadhaar)
 
 ## Getting Started

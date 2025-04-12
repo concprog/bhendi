@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation"; // Import the animation co
 
 const Home = () => {
   // Define the text strings for animation
-  const text1 = "Welcome to BHENDI!";
+  const text1 = "Welcome to Lendifinger!";
   // Combine the second line, using \n for the line break
   const text2 = "Your one-stop solution for\nall your needs of LENDING.";
 

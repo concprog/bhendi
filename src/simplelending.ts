@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { useEthersProvider } from './interface';
+import { useEthersProvider, useEthersSigner } from './interface';
 import SimpleLendingABI from '../public/SimpleLendingABI.json'; // Your compiled ABI
 import { useAccount } from 'wagmi';
 
@@ -25,7 +25,7 @@ interface SimpleLendingContract {
 
 export const useSimpleLending = (contractAddress: string): SimpleLendingContract => {
 
-    const provider = useAccount();
+    const provider = useEthersSigner();
   
     const contract = new ethers.Contract(
     contractAddress,

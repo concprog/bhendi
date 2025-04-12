@@ -17,11 +17,12 @@ type HomeProps = {
 export default function Home({ setUseTestAadhaar, useTestAadhaar }: HomeProps) {
   const [anonAadhaar] = useAnonAadhaar();
   const [, latestProof] = useProver();
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     if (anonAadhaar.status === "logged-in") {
       console.log(anonAadhaar.status);
+      router.push("/Dashboard");
     }
   }, [anonAadhaar]);
 
@@ -47,7 +48,7 @@ export default function Home({ setUseTestAadhaar, useTestAadhaar }: HomeProps) {
               
               {/* Login Button (Customize if needed) */}
               <div className="py-2">
-                <LogInWithAnonAadhaar />
+                <LogInWithAnonAadhaar nullifierSeed={5517521370862712922191135222416411013524}/>
               </div>
               
               {/* Aadhaar Mode Toggle */}

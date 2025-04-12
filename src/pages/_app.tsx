@@ -13,6 +13,20 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     setReady(true);
+
+    // Add Google Translate script
+    const script = document.createElement("script");
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    // script.setAttribute("style", "background-color:green;");
+    document.body.appendChild(script);
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "en", includedLanguages: "es,fr,de,zh,hi", layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE },
+        "google_translate_element"
+      );
+    };
   }, []);
 
   const QC = new QueryClient();
@@ -36,6 +50,8 @@ export default function App({ Component, pageProps }: AppProps) {
                 setUseTestAadhaar={setUseTestAadhaar}
                 useTestAadhaar={useTestAadhaar}
               />
+              {/* Google Translate Widget */}
+              {/* <div id="google_translate_element" style={{ position: "fixed", top: 0, right: 0, zIndex: 1000 }}></div> */}
             </AnonAadhaarProvider>
           </QueryClientProvider>
         </WagmiProvider>

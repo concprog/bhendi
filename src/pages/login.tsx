@@ -26,7 +26,7 @@ export default function login() {
 
       <div className="walletConnection flex flex-col w-[100vw]  justify-center items-center py-8">
         <p className="text-[4vh] text-white">Connect to your wallet!</p>
-        <WalletConnect />
+        <WalletConnect router = { router }/>
       </div>
       <p className="mt-4 text-white">
         You're successfully logged in with AnonAadhaar!
@@ -35,9 +35,12 @@ export default function login() {
   );
 }
 
-function WalletConnect() {
+function WalletConnect(props) {
   const { isConnected } = useAccount();
-  if (isConnected) return <Account />;
+  if (isConnected) {
+    props.router.push("/Dashboard")
+    return <Account />;
+  }
   return (
     <>
       <WalletOptions />

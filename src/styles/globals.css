@@ -6,6 +6,9 @@ html,
 body {
   height: 100%;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .wallet-adapter-button-trigger {
   background: rgb(100, 26, 230) !important;
@@ -72,13 +75,36 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .theme {
+    --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
+  }
 }
 
 @layer base {
-  
+
   body {
     /* @apply bg-background text-foreground; */ /* Remove this line */
     background-color: hsl(var(--background)); /* Add this line */
     @apply text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(var(--radius)) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg);
+    }
   }
 }

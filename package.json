@@ -35,11 +35,12 @@
     "postcss": "8.4.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-type-animation": "^3.2.0",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
-    "viem": "^2.26.3",
+    "typewriter-effect": "^2.21.0",
     "wagmi": "^2.14.16"
   },
   "devDependencies": {

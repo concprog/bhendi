@@ -31,7 +31,7 @@ function WalletOption({
 
   return (
     <button
-      className="w-[20%] border-2 border-gray-300 rounded-lg p-2 m-3 bg-black text-white hover:border-green-600 hover:text-yellow-300 transition duration-150 ease-in-out hover:shadow-[0_0_17px_rgba(74,222,128,0.7)]"
+      className="w-[20%] border-2 border-white rounded-lg p-2 m-3 bg-black text-white hover:border-gray-600 hover:text-blue-200 transition duration-150 ease-in-out hover:shadow-[0_0_17px_rgba(80,222,213,0.7)]"
       disabled={!ready}
       onClick={onClick}
     >

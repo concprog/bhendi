@@ -55,7 +55,20 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+      animation: {
+        'orbit': 'orbit var(--duration) linear infinite',
+      },
+      keyframes: {
+        orbit: {
+          from: {
+            transform: 'rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle)))',
+          },
+          to: {
+            transform: 'rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(-1 * (var(--angle) + 360deg)))',
+          },
+        },
+      },
   	}
   },
   plugins: [require('daisyui'), require("tailwindcss-animate")],
